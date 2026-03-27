@@ -1,0 +1,248 @@
+body {
+    font-family: Georgia, serif;
+    color: #222;
+}
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #1a1a2e;
+    text-align: center;
+    padding: 20px;
+}
+
+#top h1 {
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 5px rgba(0,0,0,0.4),
+        6px 6px 10px rgba(0,0,0,0.3);
+}
+
+nav .nav-lista {
+    list-style-type: none;
+}
+
+nav .nav-lista > li {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav .nav-lista > li + li {
+    margin-left: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+a[href^="http"] {
+    font-style: italic;
+    color: yellow;
+}
+
+a[target="_blank"] {
+    text-decoration: underline;
+}
+
+main > article {
+    background-color: #ffffff;
+}
+
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-style: italic;
+    word-spacing: 3px;
+    text-indent: 20px;
+    color: #555;
+}
+table {
+    border-collapse: collapse;
+    width: 800px;
+    background-color: #b0aea9;
+    font-family: Georgia, serif;
+}
+
+caption {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 2px solid #2c3e50;
+    padding: 8px 10px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #1f3f5b;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+thead tr:nth-child(2) th {
+    background-color: #2e5675;
+}
+
+tbody th {
+    background-color: #9b96a2;
+    font-weight: bold;
+}
+
+tbody td:nth-child(2) {
+    background-color: #1f3f5b;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 12px;
+}
+
+tbody td {
+    background-color: #dfe8e3;
+}
+
+tbody td:nth-last-child(2) {
+    background-color: #e6ded6;
+}
+
+tbody td:last-child {
+    background-color: #e3dfd2;
+    font-weight: bold;
+}
+
+tfoot th,
+tfoot td {
+    background-color: #cfd6dd;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h2 {
+    color: #1a1a2e;
+    text-decoration: underline;
+}
+
+h2 + p {
+    color: #444444;
+    word-spacing: 0.05em;
+    text-indent: 20px;
+}
+
+h2 ~ h2 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+blockquote {
+    background-color: #f5f0e8;
+    font-style: italic;
+    border-left: 5px solid orange;
+    padding: 10px;
+}
+
+blockquote > p:last-child {
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+thead tr + tr th {
+    background-color: #222;
+}
+
+tfoot {
+    background-color: #eee;
+    font-style: italic;
+}
+
+img[alt] {
+    border: 1px solid #ccc;
+}
+
+img[usemap] {
+    border: 3px solid red;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.7;
+}
+
+details > summary {
+    font-weight: bold;
+    color: #1a3a5c;
+}
+
+details > p {
+    color: #555;
+    word-spacing: 3px;
+}
+
+article ~ aside {
+    background-color: #f8f8f8;
+}
+
+aside > section {
+    border-left: 4px solid blue;
+}
+
+aside > section + section {
+    border-left-color: green;
+}
+
+aside h3 {
+    color: #333;
+    text-transform: uppercase;
+}
+
+#aktualnosci ul {
+    list-style-type: square;
+}
+
+#aktualnosci a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ol ul {
+    list-style-type: disc;
+}
+
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+}
+
+footer a[href^="mailto"] {
+    color: lightblue;
+}
+
+footer a[href^="tel"] {
+    color: lightgreen;
+}
+
+footer a[href^="#"] {
+    color: orange;
+}
+
+footer small {
+    opacity: 0.6;
+}

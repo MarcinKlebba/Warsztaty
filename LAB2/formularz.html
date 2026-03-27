@@ -2,91 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="formularz.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka Akademicka</title>
 </head>
 <body>
-    <form action="rejestracja.php" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <legend>Dane Osobowe:</legend>
-                <label for="imie">Imię:</label>
-                <input type="text" required minlength="2" maxlength="50" placeholder autofocus id="imie"> <br> <br>
-                <label for="nazw">Nazwisko:</label>
-                <input type="text" required maxlength="60" id="nazw"> <br> <br>
-                <label for="mail">Email:</label>
-                <input type="email" required multiple id="mail"> <br><br>
-                <label for="tel">Nr. Telefonu</label>
-                <input type="tel" pattern="[0-9]{9}" placeholder="123456789" id="for"> <br><br>
-                <label for="data">Data Urodzenia:</label>
-                <input type="date" min="1900-01-01" max="2026-01-01" id="data"> <br><br>
-                <label for="plec">Płeć</label> <br>
-                <input type="radio" name="plec" id="plec"> Kobieta <br>
-                <input type="radio" name="plec" id="plec1"> Męszczyzna <br>
-                <input type="radio" name="plec" id="plec2"> Inna <br><br>
-                <label for="pes">Pesel:</label>
-                <input type="password" pattern="[0-9]{11}" autocomplete="off" id="pes">
-        </fieldset>
-        <fieldset>
-            <legend>Adres</legend>
-                <label for="ulica">Ulica i Numer:</label>
-                <input type="text" required id="ulica"> <br><br>
-                <label for="kod">Kod Pocztowy:</label> 
-                <input type="text" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000" id="kod"> <br><br>
-                <label for="miasto">Miasto:</label>
-                <input list="miasta" id="miasta">
-                <datalist id="miasta">
-                    <option value="Gdańsk"></option>
-                    <option value="Wrocław"></option>
-                    <option value="Warszawa"></option>
-                    <option value="Kraków"></option>
-                    <option value="Puck"></option>
-                    <option value="Lublin"></option>
-                </datalist> <br><br>
-                <label for="kraj">Kraj:</label>
-                <select name="kraje" id="kraj">
-                    <optgroup label="Europa">
-                        <option value="Polska">Polska</option>
-                        <option value="Niemcy">Niemcy</option>
-                        <option value="Ukraina">Ukraina</option>
-                        <option value="Francja">Francja</option>
-                    </optgroup>
-                    <optgroup label="Afryka">
-                        <option value="Angola">Angola</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Egipt">Egipt</option>
-                        <option value="Algeria">Algeria</option>
-                    </optgroup>
-                </select>
-        </fieldset>
-        <fieldset>
-            <legend>Preferencje czytelnicze:</legend>
-                <label for="1">Preferowane<input type="checkbox" name="pref" id="1"></label> <br>
-                <label for="2">Preferowane<input type="checkbox" name="pref" id="2"></label> <br>
-                <label for="3">Preferowane<input type="checkbox" name="pref" id="3"></label> <br>
-                <label for="4">Preferowane<input type="checkbox" name="pref" id="4"></label> <br>
-                <label for="5">Preferowane<input type="checkbox" name="pref" id="5"></label> <br>
-                <label for="6">Preferowane<input type="checkbox" name="pref" id="6"></label> <br> <br>
-                <label for="liczba">Liczba wypozyczanych ksiązek miesiecznie</label>
-                <input type="number" min="1" max="20" step="1" value="3" id="liczba"> <br><br>
-                <label for="godzina">Godzina odwiedzin</label>
-                <input type="time" min="7:00" max="22:00" id="godzina"> <br><br>
-                <label for="aktywnosc">Aktywność czytelnicza</label>
-                <input type="range" min="0" max="10" step="1" id="aktywnosc">
-                <output name="wyswietl" for="a"></output> <br><br>
-                <label for="kolor">Ulubiony kolor okładki</label>
-                <input type="color" value="#3498db" id="kolor"> <br><br>
-                <label for="link">Link do profilu</label>
-                <input type="url" placeholder="https://" id="link"> <br><br>
-                <label for="zdjecie">Wgranie zdjęcia</label>
-                <input type="file" accept="image/png, image/jpeg" id="zdjecie"> <br><br>
-                <label for="komentarz">Komentarz</label>
-                <textarea rows="5" cols="50" maxlength="500" placeholder="Komentarz" id="komentarz"></textarea>
-        </fieldset>
-        <legend>Wskaźniki postępu</legend>
-        <label for="profil">Wypełnienie profilu<meter value="0.4" min="0" max="1" low="0.3" high="0.7" optimum="0.9" id="profil"></meter></label> <br>
-        <label for="postep">Postęp weryfikacji konta<progress value="25" max="100" id="postep"></progress></label> <br><br>
-        <button type="submit">Zarejestruj się</button>
-        <button type="reset">Wyczyść formularz</button>
-    </form>
+    <header>
+        <h1>Biblioteka Akademicka</h1>
+        <p>Kto czyta nie błądzi</p>
+    </header>
+    <nav>
+        <ol>
+            <li>Strona główna</li>
+            <li>Profil</li>
+            <li>Tworzenie Profilu</li>
+        </ol>
+    </nav>
+    <main>
+        <p class="info">Formularz pomoze nam dobrać ksiązki</p>
+        <form action="rejestracja.php" method="post" enctype="multipart/form-data">
+            <fieldset id="dane-osobowe">
+                <legend>Dane Osobowe:</legend>
+                    <label for="imie">Imię:</label><span class="required">*</span>
+                    <input type="text" required minlength="2" maxlength="50" placeholder autofocus id="imie"> <br> <br>
+                    <label for="nazw">Nazwisko:</label><span class="required">*</span>
+                    <input type="text" required maxlength="60" id="nazw"> <br> <br>
+                    <label for="mail">Email:</label><span class="required">*</span>
+                    <input type="email" required multiple id="mail"> <br><br>
+                    <label for="tel">Nr. Telefonu</label>
+                    <input type="tel" pattern="[0-9]{9}" placeholder="123456789" id="for"> <br><br>
+                    <label for="data">Data Urodzenia:</label>
+                    <input type="date" min="1900-01-01" max="2026-01-01" id="data"> <br><br>
+                    <label for="plec">Płeć</label> <br>
+                    <input type="radio" name="plec" id="plec"> Kobieta <br>
+                    <input type="radio" name="plec" id="plec1"> Męszczyzna <br>
+                    <input type="radio" name="plec" id="plec2"> Inna <br><br>
+                    <label for="pes">Pesel:</label>
+                    <input type="password" pattern="[0-9]{11}" autocomplete="off" id="pes">
+            </fieldset>
+            <fieldset id="adres">
+                <legend>Adres</legend>
+                    <label for="ulica">Ulica i Numer:</label>
+                    <input type="text" required id="ulica"> <br><br>
+                    <label for="kod">Kod Pocztowy:</label> 
+                    <input type="text" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000" id="kod"> <br><br>
+                    <label for="miasto">Miasto:</label>
+                    <input list="miasta" id="miasta">
+                    <datalist id="miasta">
+                        <option value="Gdańsk"></option>
+                        <option value="Wrocław"></option>
+                        <option value="Warszawa"></option>
+                        <option value="Kraków"></option>
+                        <option value="Puck"></option>
+                        <option value="Lublin"></option>
+                    </datalist> <br><br>
+                    <label for="kraj">Kraj:</label>
+                    <select name="kraje" id="kraj">
+                        <optgroup label="Europa">
+                            <option value="Polska">Polska</option>
+                            <option value="Niemcy">Niemcy</option>
+                            <option value="Ukraina">Ukraina</option>
+                            <option value="Francja">Francja</option>
+                        </optgroup>
+                        <optgroup label="Afryka">
+                            <option value="Angola">Angola</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Egipt">Egipt</option>
+                            <option value="Algeria">Algeria</option>
+                        </optgroup>
+                    </select>
+            </fieldset>
+            <fieldset id="preferencje">
+                <legend>Preferencje czytelnicze:</legend>
+                    <label for="1">Horror<input type="checkbox" name="pref" id="1"></label> <br>
+                    <label for="2">Kryminal<input type="checkbox" name="pref" id="2"></label> <br>
+                    <label for="3">Baśń<input type="checkbox" name="pref" id="3"></label> <br>
+                    <label for="4">Thriller<input type="checkbox" name="pref" id="4"></label> <br>
+                    <label for="5">Fantastyka<input type="checkbox" name="pref" id="5"></label> <br>
+                    <label for="6">Coś<input type="checkbox" name="pref" id="6"></label> <br> <br>
+                    
+                    <label for="liczba">Liczba wypozyczanych ksiązek miesiecznie</label>
+                    <input type="number" min="1" max="20" step="1" value="3" id="liczba"> <br><br>
+                    <label for="godzina">Godzina odwiedzin</label>
+                    <input type="time" min="7:00" max="22:00" id="godzina"> <br><br>
+                    <label for="aktywnosc">Aktywność czytelnicza</label>
+                    <input type="range" min="0" max="10" step="1" id="aktywnosc">
+                    <output name="wyswietl" for="a"></output> <br><br>
+                    <label for="kolor">Ulubiony kolor okładki</label>
+                    <input type="color" value="#3498db" id="kolor"> <br><br>
+                    <label for="link">Link do profilu</label>
+                    <input type="url" placeholder="https://" id="link"> <br><br>
+                    <label for="zdjecie">Wgranie zdjęcia</label>
+                    <input type="file" accept="image/png, image/jpeg" id="zdjecie"> <br><br>
+                    <label for="komentarz">Komentarz</label>
+                    <textarea rows="5" cols="50" maxlength="500" placeholder="Komentarz" id="komentarz"></textarea>
+            </fieldset>
+            <legend>Wskaźniki postępu</legend>
+            <label for="profil">Wypełnienie profilu<meter value="0.4" min="0" max="1" low="0.3" high="0.7" optimum="0.9" id="profil"></meter></label> <br>
+            <label for="postep">Postęp weryfikacji konta<progress value="25" max="100" id="postep"></progress></label> <br><br>
+            <button type="submit">Zarejestruj się</button>
+            <button type="reset">Wyczyść formularz</button>
+        </form>
+    </main>
+    <footer>
+        <p>Prawa autorskie</p>
+        <time datetime="2026">2026</time>
+        <a href="mailto:"></a>
+    </footer>
 </body>
 </html>

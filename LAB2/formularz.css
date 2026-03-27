@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    color: #222222;
+    margin: 0;
+}
+
+header {
+    background-color: #1a3a5c;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+        1px 1px 0 #000000,
+        3px 3px 5px rgba(0,0,0,0.4);
+}
+
+header p {
+    color: #c8d8e8;
+    font-style: italic;
+}
+
+nav ol {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+nav li {
+    color: #555;
+}
+
+nav li + li::before {
+    content: ">";
+    margin-right: 10px;
+    color: #999;
+}
+
+nav li:last-child {
+    font-weight: bold;
+    color: #000;
+}
+
+fieldset {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    margin: 15px;
+    padding: 15px;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #70adb0;
+}
+
+label {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+fieldset > p {
+    word-spacing: 2px;
+}
+
+
+#dane-osobowe {
+    background-color: #e8f4fd;
+}
+
+#dane-osobowe legend {
+    color: #1a3a5c;
+}
+
+#adres {
+    background-color: hsl(40, 100%, 95%);
+}
+
+#adres legend {
+    color: hsl(30, 60%, 40%);
+}
+
+#preferencje {
+    background-color: #e8f8e8;
+}
+
+#preferencje legend {
+    font-style: italic;
+    text-transform: uppercase;
+    color: green;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    padding: 5px;
+    margin: 3px 0;
+}
+
+input[type="text"] { background-color: #f9fcff; }
+input[type="email"] { background-color: #f0faff; }
+input[type="tel"] { background-color: #f9f9f9; }
+input[type="password"] { background-color: #fff0f0; }
+input[type="date"] { background-color: #f0fff5; }
+input[type="number"] { background-color: #f5f0ff; }
+input[type="url"] { background-color: #f0ffff; }
+input[type="time"] { background-color: #fffaf0; }
+input[type="color"] { border: 2px solid #ccc; }
+input[type="file"] { background-color: #f7f7f7; }
+
+input:required {
+    border-left: 4px solid blue;
+}
+
+#pes {
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    font-style: italic;
+}
+
+button[type='submit'] {
+    background-color: #1a3a5c;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    border: none;
+}
+
+button[type='reset'] {
+    background-color: #888888;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+}
+
+.info {
+    font-style: italic;
+    color: #555555;
+    text-align: center;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #1a3a5c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #c8d8e8;
+    text-decoration: underline;
+}

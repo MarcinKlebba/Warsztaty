@@ -1,19 +1,20 @@
+```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal Sportowy poświęcony rozgrywkom ligi piłkarskiej EPP. Wyniki, tabele, statystyki i aktualności.">
-    <meta name="author" content="Jan Kowalski">
+    <meta name="author" content="Marcin Klebba">
+    <link href="portal.css" rel="stylesheet" type="text/css">
     <title>Portal Sportowy — EPP</title>
     <link rel="canonical" href="https://portal-sportowy.pl/">
-    <base href="/">
 </head>
 <body>
     <header id="top">
         <h1>Portal Sportowy — <abbr title="Ekstraklasa Polska Piłki">EPP</abbr></h1>
         <nav>
-            <ul>
+            <ul class="nav-lista">
                 <li>Strona główna
                     <ul>
                         <li><a href="#aktualnosci">Aktualności</a></li>
@@ -45,6 +46,11 @@
     <main>
         <article>
             <h2>Przegląd sezonu 2025/26 — <time datetime="2026-03-10">10 marca 2026</time></h2>
+
+            <p class="lead">
+                Sezon 2025/26 dostarcza kibicom wielu emocji i nieoczekiwanych zwrotów akcji.
+            </p>
+
             <address>
                 Autor: Jan Kowalski &lt;<a href="mailto:j.kowalski@portal-sportowy.pl">j.kowalski@portal-sportowy.pl</a>&gt;
             </address>
@@ -56,10 +62,6 @@
                 <caption>Tabela ligowa EPP – po 25. kolejce (stan na 10.03.2026)</caption>
                 <colgroup>
                     <col bgcolor="#eef9f9">
-                    <col bgcolor="#f9eff2">
-                    <col bgcolor="#f2f9f2" span="4">
-                    <col bgcolor="#fdf5e6">
-                    <col bgcolor="#fff0f5">
                 </colgroup>
                 <thead>
                     <tr>
@@ -135,13 +137,14 @@
                 </tfoot>
             </table>
 
+            <blockquote cite="#">
+                <p>To był jeden z najbardziej wymagających sezonów w mojej karierze.</p>
+                <p>— Trener drużyny</p>
+            </blockquote>
+
             <figure>
-                <picture>
-                    <source media="(min-width: 800px)" srcset="https://s3.eu-central-lz-prg-a.cloud.ovh.net/cursora-s3/dev/editor/editor-images/68c3f2d8b01fa69dcba79c4d/2026/03/13/97f6482b-368f-4158-b625-3efa07f6ab9d.png">
-                    <source media="(min-width: 400px)" srcset="https://s3.eu-central-lz-prg-a.cloud.ovh.net/cursora-s3/dev/editor/editor-images/68c3f2d8b01fa69dcba79c4d/2026/03/13/f196bf0a-14c8-48df-9dd1-d6777a26479b.png">
-                    <img src="https://s3.eu-central-lz-prg-a.cloud.ovh.net/cursora-s3/dev/editor/editor-images/68c3f2d8b01fa69dcba79c4d/2026/03/13/97f6482b-368f-4158-b625-3efa07f6ab9d.png" alt="Panorama stadionu EPP podczas meczu wieczornego" width="800">
-                </picture>
                 <figcaption>Panorama stadionu EPP podczas meczu wieczornego (fot. Redakcja PS)</figcaption>
+                <img src="#.jpg" width="800px" height="400px" alt="stadion">
             </figure>
 
             <figure>
@@ -149,7 +152,6 @@
                     <source src="skrot-meczu.mp4" type="video/mp4">
                     <source src="skrot-meczu.webm" type="video/webm">
                     <track kind="subtitles" srclang="pl" src="napisy-pl.vtt" default>
-                    Twoja przeglądarka nie obsługuje elementu wideo. Pobierz plik bezpośrednio.
                 </video>
                 <figcaption>Skrót meczu: Legia Warszawa 2–1 Lech Poznań — 8. kolejka EPP 2025/26</figcaption>
             </figure>
@@ -158,110 +160,95 @@
                 <audio controls>
                     <source src="komentarz-radiowy.mp3" type="audio/mpeg">
                     <source src="komentarz-radiowy.wav" type="audio/wav">
-                    Twoja przeglądarka nie obsługuje elementu audio. Pobierz plik bezpośrednio.
                 </audio>
                 <figcaption>Komentarz radiowy z meczu Legia – Lech (93 min.)</figcaption>
             </figure>
 
-            <h3>Statystyki szczegółowe drużyn</h3>
-            <details>
-                <summary>Legia Warszawa</summary>
-                <dl>
-                    <dt>Bramki strzelone z gry</dt>
-                    <dd>35</dd>
-                    <dt>Bramki ze stałych fragmentów</dt>
-                    <dd>13</dd>
-                </dl>
+            <h1>Statystyki wybranych zawodników</h1>
+
+            <details open>
+                <summary>Robert Wiśniewski (Legia Warszawa) — napastnik</summary>
+                <p>Mecze<br>25</p>
+                <p>Gole<br>18</p>
             </details>
             <details>
-                <summary>Lech Poznań</summary>
-                <dl>
-                    <dt>Bramki strzelone z gry</dt>
-                    <dd>30</dd>
-                    <dt>Bramki ze stałych fragmentów</dt>
-                    <dd>14</dd>
-                </dl>
+                <summary>Artur Robak (Legia Warszawa) — obrońca</summary>
+                <p>Mecze<br>16</p>
+                <p>Gole<br>6</p>
             </details>
             <details>
-                <summary>Raków Częstochowa</summary>
-                <dl>
-                    <dt>Bramki strzelone z gry</dt>
-                    <dd>28</dd>
-                    <dt>Bramki ze stałych fragmentów</dt>
-                    <dd>12</dd>
-                </dl>
+                <summary>Konrad Czarny (Legia Warszawa) — pomocnik</summary>
+                <p>Mecze<br>4</p>
+                <p>Gole<br>1</p>
             </details>
 
-            <h3>Mapa obrazkowa stadionu</h3>
-            <img src="#" alt="Mapa sektorów na stadionie" usemap="#mapa-stadionu" width="800" height="400">
-            <map name="mapa-stadionu">
-                <area shape="rect" coords="50,50,200,200" href="#sektor-vip" alt="Sektor VIP">
-                <area shape="circle" coords="400,200,50" href="#srodek-boiska" alt="Środek boiska">
-                <area shape="poly" coords="600,50,750,50,700,200,550,200" href="#sektor-gosci" alt="Sektor gości">
-            </map>
+            <h3>Mapa lig europejskich</h3>
+            <img src="#.jpg" width="1100px" height="300px" alt="mapa">
+
         </article>
 
         <aside>
-            <hr>
-            <h3>Słownik piłkarski</h3>
-            <dl>
-                <dt><abbr title="Polski Związek Piłki Nożnej">PZPN</abbr></dt>
-                <dd>Organizacja zarządzająca piłką nożną w Polsce.</dd>
-                <dt>Spalony</dt>
-                <dd>Sytuacja, w której zawodnik atakujący jest bliżej linii bramkowej przeciwnika niż piłka i przedostatni zawodnik drużyny broniącej w momencie podania.</dd>
-                <dt>Derby</dt>
-                <dd>Mecz rozgrywany między dwiema drużynami z tego samego miasta lub regionu.</dd>
-                <dt>Hat-trick</dt>
-                <dd>Zdobycie trzech bramek w jednym meczu przez tego samego zawodnika.</dd>
-                <dt>Stałe fragmenty gry</dt>
-                <dd>
-                    <dl>
-                        <dt>Rzut wolny</dt>
-                        <dd>Sposób wznowienia gry po faulu.</dd>
-                        <dt>Rzut rożny</dt>
-                        <dd>Wznowienie gry z narożnika boiska.</dd>
-                    </dl>
-                </dd>
-                <dt>VAR</dt>
-                <dd>System wideoweryfikacji wspomagający sędziego głównego.</dd>
-            </dl>
 
-            <h3>Sponsorzy ligi</h3>
-            <iframe src="https://pl.wikipedia.org/wiki/Ekstraklasa_w_pi%C5%82ce_no%C5%BCnej" title="Sponsorzy i partnerzy EPP" width="300" height="250" loading="lazy"></iframe>
+            <section id="aktualnosci">
+                <h3>Aktualności</h3>
+                <ul>
+                    <li><a href="#">Nowy lider tabeli</a></li>
+                    <li><a href="#">Kontuzja zawodnika</a></li>
+                    <li><a href="#">Rekord frekwencji</a></li>
+                </ul>
+            </section>
 
-            <h3>Baza szkoleniowa</h3>
-            <ol>
-                <li>Mazowieckie
-                    <ul>
-                        <li>Ośrodek Legii</li>
-                        <li>Akademia Polonii</li>
-                    </ul>
-                </li>
-                <li>Wielkopolskie
-                    <ul>
-                        <li>Ośrodek we Wronkach</li>
-                        <li>Baza Lecha Poznań</li>
-                    </ul>
-                </li>
-            </ol>
             <hr>
+
+<aside>
+     <hr>
+    <h3>Słownik piłkarski</h3>
+    <dl> 
+        <dt>
+            <abbr title="Polski Związek Piłki Nożnej">PZPN</abbr>
+        </dt>
+        <dd>Organizacja zarządzająca piłką nożną w Polsce.</dd>
+        <dt>Spalony</dt>
+        <dd>Sytuacja, w której zawodnik atakujący jest bliżej linii bramkowej przeciwnika niż piłka i przedostatni zawodnik drużyny broniącej w momencie podania.</dd>
+        <dt>Derby</dt>
+        <dd>Mecz rozgrywany między dwiema drużynami z tego samego miasta lub regionu.</dd>
+        <dt>Hat-trick</dt>
+         <dd>Zdobycie trzech bramek w jednym meczu przez tego samego zawodnika.</dd>
+              <dt>Stałe fragmenty gry</dt>
+               <dd> <dl>
+                 <dt>Rzut wolny</dt> 
+                 <dd>Sposób wznowienia gry po faulu.</dd>
+                <dt>Rzut rożny</dt> <dd>Wznowienie gry z narożnika boiska.</dd>
+             </dl>
+             </dd>
+              <dt>VAR</dt>
+               <dd>System wideoweryfikacji wspomagający sędziego głównego.</dd>
+             </dl> 
+             <h3>Sponsorzy ligi</h3>
+              <iframe src="https://pzpn.pl/" title="Sponsorzy i partnerzy EPP" width="300" height="250" loading="lazy"></iframe>
+               <h3>Top 2 Królów strzelców</h3>
+                <ol> <li> Robert Wiśniewski <ul>
+                     <li>Gole z gry: 14</li> <li>Rzuty karne: 4</li>
+                    </ul>
+                     </li> <li>Piotr Malinowski <ul> 
+                        <li>Gole z gry: 7</li>
+                         <li>Rzuty karne: 3</li>
+                    </ul> </li> </ol> <hr> </aside>
+
         </aside>
     </main>
 
     <footer>
         <address>
-            Kontakt do redakcji:<br>
-            E-mail: <a href="mailto:kontakt@portal-sportowy.pl">kontakt@portal-sportowy.pl</a><br>
-            Telefon: <a href="tel:+48111222333">+48 111 222 333</a>
+            Kontakt: 
+            <a href="mailto:kontakt@portal-sportowy.pl">email</a>
+            <a href="tel:+48111222333">telefon</a>
         </address>
-        <p>
-            <small>
-                &copy; <time datetime="2026-03-10">2026</time> Portal Sportowy EPP. Wszelkie prawa zastrzeżone.
-            </small>
-        </p>
-        <p>
-            <a href="#top">Wróć na górę strony ↑</a>
-        </p>
+
+        <p><small>© 2026 Portal Sportowy</small></p>
+
+        <p><a href="#top">Wróć na górę strony</a></p>
     </footer>
 </body>
 </html>
+```
