@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h3>Menadżer Zadań</h3>
+    </header>
+    <aside>
+        <form>
+            <label for="tytul">Tytuł zadania</label> <br>
+            <input type="text" id="tytul" required> <br><br>
+            <label for="kategoria">Kategoria</label> <br>
+            <select name="kat" id="kat" required>
+                <option value="Praca">Praca</option>
+                <option value="Dom">Dom</option>
+                <option value="Nauka">Nauka</option>
+                <option value="Zdrowie">Zdrowie</option>
+                <option value="Inne">Inne</option>
+            </select> <br><br>
+            <label for="prio">Priorytet</label> <br>
+            <select name="prio" id="priorytet">
+                <option value="niski">nisko</option>
+                <option value="sredni">sredni</option>
+                <option value="wysoki">wysoki</option>
+            </select> <br><br>
+            <label for="data">Data wykonania</label>
+            <input type="date" required> <br><br>
+            <label for="opis">Opis</label> <br>
+            <textarea name="opis" id="opis"></textarea> <br><br>
+            <label for="status">Status</label>
+            <select name="status" id="status">
+                <option value="do">do zrobienia</option>
+                <option value="w">w trakcie</option>
+                <option value="zak">zakończone</option>
+            </select> <br><br>
+            <input type="submit" value="Dodaj zadanie">
+        </form>
+    </aside>
+    <main>
+        <div id="all"><p>6</p>Wszystkie</div>
+        <div id="todo"><p>3</p>Do zrobienia</div>
+        <div id="whil"><p>2</p>W trakcie</div>
+        <div id="done"><p>1</p>Zakończone</div>
+
+        <div id="form">
+            <form action="">
+                <input type="submit" value="sort">
+                <input type="submit" value="sort">
+                <input type="submit" value="sort">
+                <input type="submit" value="sort">
+            </form>
+        </div>
+
+        <div class="tasks">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </main>
+</body>
+</html>
