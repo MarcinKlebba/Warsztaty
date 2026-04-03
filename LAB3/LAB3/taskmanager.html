@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menadżer Zadań</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+
+<header>
+  <h3>Menadżer Zadań</h3>
+</header>
+
+<aside>
+  <h4>Dodaj zadanie</h4>
+  <form>
+    <label for="tytul">Tytuł zadania</label>
+    <input type="text" id="tytul" name="tytul" placeholder="Wpisz tytuł..." required>
+
+    <label for="kategoria">Kategoria</label>
+    <select id="kategoria" name="kategoria" required>
+      <option value="">-- wybierz --</option>
+      <option value="Praca">Praca</option>
+      <option value="Dom">Dom</option>
+      <option value="Nauka">Nauka</option>
+      <option value="Zdrowie">Zdrowie</option>
+      <option value="Inne">Inne</option>
+    </select>
+
+    <label for="priorytet">Priorytet</label>
+    <select id="priorytet" name="priorytet" required>
+      <option value="">-- wybierz --</option>
+      <option value="niski">Niski</option>
+      <option value="sredni">Średni</option>
+      <option value="wysoki">Wysoki</option>
+    </select>
+
+    <label for="data">Data wykonania</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="opis">Opis zadania</label>
+    <textarea id="opis" name="opis" placeholder="Opcjonalny opis..."></textarea>
+
+    <label for="status">Status</label>
+    <select id="status" name="status" required>
+      <option value="do-zrobienia">Do zrobienia</option>
+      <option value="w-trakcie">W trakcie</option>
+      <option value="zakonczone">Zakończone</option>
+    </select>
+
+    <button type="submit">Dodaj zadanie</button>
+  </form>
+</aside>
+
+<main>
+  <div id="stats">
+    <div class="stat-block">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Wszystkie</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Do zrobienia</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">2</span>
+      <span class="stat-label">W trakcie</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Zakończone</span>
+    </div>
+  </div>
+
+  <div id="sort-bar">
+    <button class="sort-btn active">Tytuł ↑</button>
+    <button class="sort-btn">Priorytet</button>
+    <button class="sort-btn">Data</button>
+    <button class="sort-btn">Kategoria</button>
+  </div>
+
+  <div class="tasks">
+
+    <div class="task-card wysoki">
+      <span class="priority-badge wysoki">Wysoki</span>
+      <div class="task-title">Przygotuj prezentację dla klienta</div>
+      <div class="task-meta">Kategoria: <strong>Praca</strong> &nbsp; Termin: <strong>2026-03-30</strong></div>
+      <div class="task-desc">Prezentacja postępów w nowym projekcie webowym. Wymagane slajdy i demo działającej aplikacji.</div>
+      <span class="status-badge w-trakcie">W trakcie</span>
+    </div>
+
+    <div class="task-card niski">
+      <span class="priority-badge niski">Niski</span>
+      <div class="task-title">Zakupy spożywcze</div>
+      <div class="task-meta">Kategoria: <strong>Dom</strong> &nbsp; Termin: <strong>2026-03-28</strong></div>
+      <div class="task-desc">Mleko, chleb, warzywa sezonowe, kawa. Pamiętać o ekotorbie.</div>
+      <span class="status-badge do-zrobienia">Do zrobienia</span>
+    </div>
+
+    <div class="task-card sredni">
+      <span class="priority-badge sredni">Średni</span>
+      <div class="task-title">Nauka CSS – model pudełkowy</div>
+      <div class="task-meta">Kategoria: <strong>Nauka</strong> &nbsp; Termin: <strong>2026-04-05</strong></div>
+      <div class="task-desc">Przerobić materiały z wykładu 4: padding, margin, border, float, position.</div>
+      <span class="status-badge do-zrobienia">Do zrobienia</span>
+    </div>
+
+    <div class="task-card wysoki">
+      <span class="priority-badge wysoki">Wysoki</span>
+      <div class="task-title">Opłacić rachunki</div>
+      <div class="task-meta">Kategoria: <strong>Dom</strong> &nbsp; Termin: <strong>2026-03-29</strong></div>
+      <div class="task-desc">Prąd, internet, czynsz. Przelew bankowy lub przez aplikację mobilną.</div>
+      <span class="status-badge zakonczone">Zakończone</span>
+    </div>
+
+    <div class="task-card sredni">
+      <span class="priority-badge sredni">Średni</span>
+      <div class="task-title">Przegląd techniczny samochodu</div>
+      <div class="task-meta">Kategoria: <strong>Inne</strong> &nbsp; Termin: <strong>2026-04-10</strong></div>
+      <div class="task-desc">Umówić wizytę w warsztacie na wymianę oleju i sprawdzenie hamulców.</div>
+      <span class="status-badge w-trakcie">W trakcie</span>
+    </div>
+
+    <div class="task-card niski">
+      <span class="priority-badge niski">Niski</span>
+      <div class="task-title">Wizyta u dentysty</div>
+      <div class="task-meta">Kategoria: <strong>Zdrowie</strong> &nbsp; Termin: <strong>2026-04-15</strong></div>
+      <div class="task-desc">Kontrolna wizyta u stomatologa. Zadzwonić i umówić termin w przyszłym tygodniu.</div>
+      <span class="status-badge do-zrobienia">Do zrobienia</span>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
