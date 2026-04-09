@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menadżer Zadań</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+
+<header>
+  <div class="header-title">Menadżer Zadań</div>
+  <nav class="header-nav">
+    <a href="#" class="nav-link">Wszystkie</a>
+    <a href="#" class="nav-link">Do zrobienia</a>
+    <a href="#" class="nav-link">W trakcie</a>
+    <a href="#" class="nav-link active">Zakończone</a>
+  </nav>
+</header>
+
+<aside>
+  <h4>Dodaj zadanie</h4>
+  <form>
+    <label for="tytul">Tytuł zadania</label>
+    <input type="text" id="tytul" name="tytul" placeholder="Wpisz tytuł...">
+
+    <label for="kategoria">Kategoria</label>
+    <select id="kategoria" name="kategoria">
+      <option value="">-- wybierz --</option>
+      <option value="Praca">Praca</option>
+      <option value="Dom">Dom</option>
+      <option value="Nauka">Nauka</option>
+      <option value="Zdrowie">Zdrowie</option>
+      <option value="Inne">Inne</option>
+    </select>
+
+    <label for="priorytet">Priorytet</label>
+    <select id="priorytet" name="priorytet">
+      <option value="">-- wybierz --</option>
+      <option value="niski">Niski</option>
+      <option value="sredni">Średni</option>
+      <option value="wysoki">Wysoki</option>
+    </select>
+
+    <label for="data">Data wykonania</label>
+    <input type="date" id="data" name="data">
+
+    <label for="opis">Opis zadania</label>
+    <textarea id="opis" name="opis" placeholder="Opcjonalny opis..."></textarea>
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+      <option value="do-zrobienia">Do zrobienia</option>
+      <option value="w-trakcie">W trakcie</option>
+      <option value="zakonczone">Zakończone</option>
+    </select>
+
+    <button type="submit">Dodaj zadanie</button>
+  </form>
+</aside>
+
+<main>
+  <div id="stats">
+    <div class="stat-block">
+      <span class="stat-num">8</span>
+      <span class="stat-label">Wszystkie</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Do zrobienia</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">3</span>
+      <span class="stat-label">W trakcie</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">2</span>
+      <span class="stat-label">Zakończone</span>
+    </div>
+  </div>
+
+  <div id="sort-bar">
+    <span class="sort-label">Sortuj:</span>
+    <button class="sort-btn active">Tytuł ↑</button>
+    <button class="sort-btn">Priorytet</button>
+    <button class="sort-btn">Data</button>
+    <button class="sort-btn">Kategoria</button>
+    <button class="sort-btn">Status</button>
+  </div>
+
+  <div class="tasks">
+
+    <div class="task-card wysoki span-col-2">
+      <div class="task-header">
+        <div class="task-title">Wdrożenie nowego systemu logowania</div>
+        <span class="priority-badge wysoki">Wysoki</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Praca</strong> &nbsp; Termin: <strong>2026-04-10</strong></div>
+      <div class="task-desc">
+        Migracja z sesji serwerowych na JWT. Wymaga aktualizacji backendu, frontendu i dokumentacji API. Koniecznie przetestować przepływ OAuth z dostawcą zewnętrznym.
+        <ul class="task-checklist">
+          <li class="done">Eksport danych z MySQL</li>
+          <li class="done">Konwersja schematu</li>
+          <li>Import do PostgreSQL</li>
+          <li>Testy regresji</li>
+          <li>Przełączenie produkcji</li>
+        </ul>
+      </div>
+      <div class="task-footer">
+        <span class="status-badge w-trakcie">W trakcie</span>
+        <span class="task-due">Termin za 2 dni</span>
+      </div>
+    </div>
+
+    <div class="task-card wysoki span-row-2">
+      <div class="task-header">
+        <div class="task-title">Naprawa błędu w płatnościach</div>
+        <span class="priority-badge wysoki">Wysoki</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Praca</strong> &nbsp; Termin: <strong>2026-04-05</strong></div>
+      <div class="task-desc">
+        Zduplikowane transakcje przy wielokrotnym kliknięciu przycisku „Zapłać". Dodać blokadę po pierwszym kliknięciu. Sprawdzić logi z ostatnich 7 dni i przeanalizować skalę problemu u klientów.
+      </div>
+      <div class="task-footer">
+        <span class="status-badge do-zrobienia">Do zrobienia</span>
+        <span class="task-due">Termin za 2 dni</span>
+      </div>
+    </div>
+
+    <div class="task-card sredni">
+      <div class="task-header">
+        <div class="task-title">Nauka CSS Grid i Flexbox</div>
+        <span class="priority-badge sredni">Średni</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Nauka</strong> &nbsp; Termin: <strong>2026-04-12</strong></div>
+      <div class="task-desc">Przerobić materiały z wykładu 5: grid-template-areas, repeat, minmax, flexbox gap, flex-grow, align-self.</div>
+      <div class="task-footer">
+        <span class="status-badge w-trakcie">W trakcie</span>
+        <span class="task-due">Termin za 9 dni</span>
+      </div>
+    </div>
+
+    <div class="task-card sredni">
+      <div class="task-header">
+        <div class="task-title">Przegląd techniczny samochodu</div>
+        <span class="priority-badge sredni">Średni</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Inne</strong> &nbsp; Termin: <strong>2026-04-20</strong></div>
+      <div class="task-desc">Wymiana oleju, sprawdzenie hamulców i ciśnienia opon. Umówić wizytę telefonicznie.</div>
+      <div class="task-footer">
+        <span class="status-badge do-zrobienia">Do zrobienia</span>
+        <span class="task-due">Termin za 17 dni</span>
+      </div>
+    </div>
+
+    <div class="task-card niski">
+      <div class="task-header">
+        <div class="task-title">Zakupy spożywcze</div>
+        <span class="priority-badge niski">Niski</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Dom</strong> &nbsp; Termin: <strong>2026-04-04</strong></div>
+      <div class="task-desc">Mleko, chleb, warzywa, kawa. Pamiętać o ekotorbie.</div>
+      <div class="task-footer">
+        <span class="status-badge zakonczone">Zakończone</span>
+        <span class="task-due">Termin minął</span>
+      </div>
+    </div>
+
+    <div class="task-card niski">
+      <div class="task-header">
+        <div class="task-title">Wizyta u dentysty</div>
+        <span class="priority-badge niski">Niski</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Zdrowie</strong> &nbsp; Termin: <strong>2026-04-25</strong></div>
+      <div class="task-desc">Kontrolna wizyta u stomatologa. Zadzwonić i umówić termin.</div>
+      <div class="task-footer">
+        <span class="status-badge do-zrobienia">Do zrobienia</span>
+        <span class="task-due">Termin za 22 dni</span>
+      </div>
+    </div>
+
+    <div class="task-card wysoki">
+      <div class="task-header">
+        <div class="task-title">Migracja bazy danych do PostgreSQL</div>
+        <span class="priority-badge wysoki">Wysoki</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Praca</strong> &nbsp; Termin: <strong>2026-04-18</strong></div>
+      <div class="task-desc">Migracja z MySQL 5.7 na PostgreSQL 16. Etapy: eksport danych, konwersja schematu, import, testy regresji, przełączenie ruchu produkcyjnego.</div>
+      <div class="task-footer">
+        <span class="status-badge w-trakcie">W trakcie</span>
+        <span class="task-due">Termin za 15 dni</span>
+      </div>
+    </div>
+
+    <div class="task-card niski">
+      <div class="task-header">
+        <div class="task-title">Aktualizacja README projektu</div>
+        <span class="priority-badge niski">Niski</span>
+      </div>
+      <div class="task-meta">Kategoria: <strong>Praca</strong> &nbsp; Termin: <strong>2026-04-01</strong></div>
+      <div class="task-desc">Zaktualizować instrukcję instalacji i opis API w pliku README.md repozytorium.</div>
+      <div class="task-footer">
+        <span class="status-badge zakonczone">Zakończone</span>
+        <span class="task-due">Termin minął</span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
